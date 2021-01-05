@@ -1,0 +1,13 @@
+<div id="navigation">
+    <div id="navigation__display">
+        <h4>Free to play Games</h4>
+        <div class="btn">
+            <img src="../../assets/menu.svg" alt="Menu Button">
+        </div>
+    </div>
+    <div id="navigation__menu">
+        <ul>
+            <li *ngFor="let category of categories">{{category.name}}</li>
+        </ul>
+    </div>
+</div>

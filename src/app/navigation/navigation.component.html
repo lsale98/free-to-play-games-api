@@ -1,13 +1,21 @@
 <div id="navigation">
     <div id="navigation__display">
         <h4>Free to play Games</h4>
-        <div class="btn">
+        <div class="btn" (click)="toggleMenu()">
             <img src="../../assets/menu.svg" alt="Menu Button">
         </div>
     </div>
-    <div id="navigation__menu">
-        <ul>
-            <li *ngFor="let category of categories">{{category.name}}</li>
-        </ul>
+    <div id="navigation__menu" [ngClass]="{'active': menuOpen}">
+        <div class="genre" [ngClass]="{'active': genreMenuOpen}">
+            <h3 (click)="toggleGenreMenu()"><i class="fas fa-chevron-down"></i>Genre</h3>
+            <ul>
+                <li>
+                    <a href="#" (click)="toggleMenu()">All Genres</a>
+                </li>
+                <li *ngFor="let category of categories">
+                    <a href="#" (click)="toggleMenu()">{{category.name}}</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>

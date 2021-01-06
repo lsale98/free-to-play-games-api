@@ -1,4 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+@import 'variables';
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: $secondary;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: $blue-color;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: $blue-color-10;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,4 +43,8 @@ a,
 a:hover {
     text-decoration: none;
     color: black;
+}
+
+li {
+    list-style-type: none;
 }

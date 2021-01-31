@@ -1,0 +1,147 @@
+@import '../../variables';
+#game {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: $primary;
+    padding: 56px 0 40px 0;
+    h2 {
+        text-align: center;
+        padding: 20px 0;
+        color: white;
+    }
+    &__info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .image__genre__platform {
+            width: 100%;
+            .image {
+                width: 100%;
+            }
+            .info {
+                width: fit-content;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 40px;
+                p {
+                    color: $gray-text;
+                    padding: 10px;
+                    text-align: center;
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        .description {
+            width: 100%;
+            padding: 0px 40px;
+            p {
+                margin-bottom: 10px;
+                color: $gray-text;
+            }
+            .game__link {
+                display: block;
+                margin-top: 40px;
+                text-align: center;
+                padding: 8px 10px;
+                background-color: $blue-color-10;
+                border-radius: 5px;
+                letter-spacing: 2px;
+                color: #fff;
+            }
+        }
+    }
+    #other {
+        padding: 40px;
+        .other__heading {
+            color: $gray-text;
+            margin-bottom: 20px;
+        }
+        &__games {
+            width: 100%;
+            height: fit-content;
+            // padding-top: 60px;
+            // padding-left: 40px;
+            // padding-right: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            .other__game {
+                max-width: 320px;
+                height: fit-content;
+                margin-bottom: 30px;
+                background-color: $secondary;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &__image {
+                    width: 100%;
+                }
+                &__info {
+                    color: $gray-text;
+                    background-color: $secondary;
+                    padding: 10px 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .other__info {
+                        h3 {
+                            font-size: 14px;
+                            span {
+                                font-weight: 400;
+                                color: $blue-color;
+                            }
+                        }
+                    }
+                    .btn {
+                        width: 22px;
+                        height: 22px;
+                        text-align: center;
+                        a {
+                            display: inline-block;
+                            width: 100%;
+                            height: 100%;
+                            i {
+                                color: $blue-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:750px) {
+    #game {
+        padding: 56px 40px 40px 40px;
+        &__info {
+            flex-direction: row;
+            align-items: flex-start;
+            .image__genre__platform {
+                flex: 45%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:900px) {
+    #game {
+        &__info {
+            .description {
+                .game__link {
+                    display: inline-block;
+                    margin-top: 10px;
+                    padding: 6px 24px;
+                }
+            }
+        }
+    }
+}

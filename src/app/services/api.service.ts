@@ -9,7 +9,9 @@ export class ApiService {
 
   readonly API_BASE = "https://www.freetogame.com/api/games";
 
-  readonly API_BASE_SINGLE = "https://www.freetogame.com/api/game?id="
+  readonly API_BASE_SINGLE = "https://www.freetogame.com/api/game?id=";
+
+  readonly API_BASE_GENRE = "https://www.freetogame.com/api/games?category=";
 
   constructor(private http: HttpClient) { }
 
@@ -19,5 +21,9 @@ export class ApiService {
 
   getGame(id: Number): Observable<HttpResponse<IGame>>{
     return this.http.get<IGame>(this.API_BASE_SINGLE + `${id}`, {observe: 'response'});
+  }
+
+  getGamesGenre(genre: String): Observable<HttpResponse<IGame[]>>{
+    return this.http.get<IGame[]>(this.API_BASE_GENRE + `${genre}`, { observe: 'response' });
   }
 }

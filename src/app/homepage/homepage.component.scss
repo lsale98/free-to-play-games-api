@@ -30,7 +30,10 @@
                 color: white;
                 font-weight: 400;
                 font-size: 20px;
-                margin-bottom: 15px;
+            }
+            p {
+                margin: 10px 0 15px 0;
+                color: $gray-text;
             }
             .btn {
                 a {
@@ -57,7 +60,7 @@
         padding-left: 40px;
         padding-right: 40px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
         .game {
@@ -105,11 +108,29 @@
     }
 }
 
+@media only screen and (min-width: 600px) {
+    #homepage {
+        .hero {
+            .layer {
+                .heading {
+                    font-size: 28px;
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 800px) {
     #homepage {
         .hero {
             .layer {
                 .heading {
+                    font-size: 36px;
+                }
+                p {
                     font-size: 26px;
                 }
             }

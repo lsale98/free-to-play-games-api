@@ -1,11 +1,21 @@
 <div id="navigation">
     <div id="navigation__display">
-        <h4>Free to play Games</h4>
+        <a routerLink="/">Free to play Games</a>
         <div class="btn" (click)="toggleMenu()">
             <img src="../../assets/menu.svg" alt="Menu Button">
         </div>
     </div>
     <div id="navigation__menu" [ngClass]="{'active': menuOpen}">
+        <div class="general">
+            <ul>
+                <li>
+                    <a routerLink="/">Home</a>
+                </li>
+                <li>
+                    <a routerLink="/favorite">Favorite</a>
+                </li>
+            </ul>
+        </div>
         <div class="genre" [ngClass]="{'active': genreMenuOpen}">
             <h3 (click)="toggleGenreMenu()"><i class="fas fa-chevron-down"></i>Genre</h3>
             <ul>

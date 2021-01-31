@@ -1,6 +1,26 @@
 <div id="homepage">
-    <h3>Best Free to Play games</h3>
-    <ul>
-        <li *ngFor="let game of games">{{game.title}}</li>
-    </ul>
+    <div class="hero">
+        <img class="hero__image" src="../../assets/hero.jpg" alt="Hero background image">
+        <div class="layer">
+            <h2 class="heading">Find your favorite game & play!</h2>
+            <div class="btn">
+                <a href="#games" class="browse">Browse</a>
+                <a routerLink="/favorite" class="favorite">Favorite</a>
+            </div>
+        </div>
+    </div>
+    <div id="games">
+        <div class="game" *ngFor="let game of games">
+            <img class="game__image" [src]="game.thumbnail" alt="{{game.title}} image">
+            <div class="game__info">
+                <div class="info">
+                    <h3>Game: <span>{{game.title}}</span></h3>
+                    <h3>Publisher: {{game.publisher}}</h3>
+                </div>
+                <div class="btn">
+                    <a routerLink="/game/{{game.id}}"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

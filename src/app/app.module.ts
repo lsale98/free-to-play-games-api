@@ -6,12 +6,14 @@ import { ApiService } from './services/api.service';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { GameComponent } from './game/game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    HomepageComponent
+    HomepageComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { IGame } from '../models/Game';
 import { ApiService } from '../services/api.service';
 
@@ -15,9 +16,15 @@ export class GameComponent implements OnInit {
   game: IGame;
   games: IGame[] = [];
 
-  constructor(private route: ActivatedRoute, private apiService: ApiService) { }
+  constructor(private route: ActivatedRoute, private apiService: ApiService, private location:Location, private router: Router) {
+    this.location.onUrlChange(path => {
+      window.location.reload();
+     });
+   
+   }
 
   ngOnInit(): void {
+  
     this.route.paramMap.subscribe(params => {
       this.currentId = +params.get('id');
     });    

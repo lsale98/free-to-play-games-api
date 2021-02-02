@@ -13,11 +13,12 @@ export class HomepageComponent implements OnInit {
   randomGames: IGame[] = [];
   gamesId: Array<Number> = [];
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService) {
+   
+   }
 
   ngOnInit(): void {
     this.getGames();
-   
   }
 
   getGames(): void{

@@ -1,16 +1,13 @@
-<div id="homepage">
+<div id="genre">
     <div class="hero">
-        <img class="hero__image" src="../../assets/hero.jpg" alt="Hero background image">
+        <img class="hero__image" src="../../assets/{{currentGenre}}.jpg" alt="Hero background image">
         <div class="layer">
-            <h2 class="heading">Find your favorite game & play!</h2>
-            <p>Find games, mark as a favorite & enjoy!</p>
+            <h2 class="heading">Find your favorite {{currentGenre | titlecase}} game & play!</h2>
             <div class="btn">
-                <a href="#all-games" class="browse">Browse</a>
-                <a routerLink="/favorite" class="favorite">Favorite</a>
+                <a href="#all-games" class="browse">Browse All Genre</a>
             </div>
         </div>
     </div>
-    <h2 id="all-games" class="all__games">All Games</h2>
     <div id="games">
         <div class="game" *ngFor="let game of games">
             <img class="game__image" [src]="game.thumbnail" alt="{{game.title}} image">

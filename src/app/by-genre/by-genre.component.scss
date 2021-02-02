@@ -1,5 +1,5 @@
 @import '../../variables';
-#homepage {
+#genre {
     width: 100%;
     min-height: 100vh;
     background-color: $primary;
@@ -30,10 +30,7 @@
                 color: white;
                 font-weight: 400;
                 font-size: 20px;
-            }
-            p {
-                margin: 10px 0 15px 0;
-                color: $gray-text;
+                margin-bottom: 20px;
             }
             .btn {
                 a {
@@ -46,17 +43,8 @@
                     background-color: $blue-color;
                     color: white;
                 }
-                .favorite {
-                    border: 1px solid $gray-text;
-                    color: $gray-text;
-                }
             }
         }
-    }
-    h2.all__games {
-        text-align: center;
-        padding-top: 70px;
-        color: white;
     }
     #games {
         width: 100%;
@@ -115,7 +103,7 @@
 }
 
 @media only screen and (min-width: 600px) {
-    #homepage {
+    #genre {
         .hero {
             .layer {
                 .heading {
@@ -130,7 +118,7 @@
 }
 
 @media only screen and (min-width: 800px) {
-    #homepage {
+    #genre {
         .hero {
             .layer {
                 .heading {

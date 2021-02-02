@@ -17,34 +17,34 @@ export class NavigationComponent implements OnInit {
 
   categories: ICategory[] = [
     {
-      name: "MMO"
+      name: "mmo"
     },
      {
-      name: "MMORPG"
+      name: "mmorpg"
     },
     {
-      name: "Shooter"
+      name: "shooter"
     },
     {
-      name: "Strategy"
+      name: "strategy"
     },
     {
-      name: "Moba"
+      name: "moba"
     },
     {
-      name: "Card Games"
+      name: "card"
     },
     {
-      name: "Racing"
+      name: "racing"
     },
     {
-      name: "Sports"
+      name: "sports"
     },
     {
-      name: "Social"
+      name: "social"
     },
     {
-      name: "Fighting"
+      name: "fighting"
     },
   ];
 
@@ -58,6 +58,10 @@ export class NavigationComponent implements OnInit {
   toggleMenu(): void{
     this.menuOpen = !this.menuOpen;
     this.genreMenuOpen = false;
+  }
+
+  scrollTop(): void{
+    window.scroll(0, 0);
   }
 
   

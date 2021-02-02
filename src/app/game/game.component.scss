@@ -76,6 +76,7 @@
             .other__game {
                 max-width: 320px;
                 height: fit-content;
+                margin: auto;
                 margin-bottom: 30px;
                 background-color: $secondary;
                 &:last-child {
@@ -128,6 +129,9 @@
             .image__genre__platform {
                 flex: 45%;
             }
+        }
+        #other {
+            padding: 40px 0;
         }
     }
 }

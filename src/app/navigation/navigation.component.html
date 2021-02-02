@@ -1,6 +1,6 @@
 <div id="navigation">
     <div id="navigation__display">
-        <a routerLink="/">Free to play Games</a>
+        <a routerLink="/" (click)="scrollTop()">Free to play Games</a>
         <div class="btn" (click)="toggleMenu()">
             <img src="../../assets/menu.svg" alt="Menu Button">
         </div>
@@ -20,10 +20,10 @@
             <h3 (click)="toggleGenreMenu()"><i class="fas fa-chevron-down"></i>Genre</h3>
             <ul>
                 <li>
-                    <a href="#" (click)="toggleMenu()">All Genres</a>
+                    <a href="#all-games" (click)="toggleMenu()">All Genres</a>
                 </li>
                 <li *ngFor="let category of categories">
-                    <a href="#" (click)="toggleMenu()">{{category.name}}</a>
+                    <a routerLink="/genre/{{category.name}}" (click)="toggleMenu()">{{category.name | titlecase}}</a>
                 </li>
             </ul>
         </div>

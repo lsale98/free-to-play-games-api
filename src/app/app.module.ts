@@ -9,6 +9,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { GameComponent } from './game/game.component';
 import { ByGenreComponent } from './by-genre/by-genre.component';
 import { ByPlatformComponent } from './by-platform/by-platform.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ByPlatformComponent } from './by-platform/by-platform.component';
     HomepageComponent,
     GameComponent,
     ByGenreComponent,
-    ByPlatformComponent
+    ByPlatformComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

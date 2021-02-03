@@ -5,33 +5,32 @@ import { IGame } from '../models/Game';
 import { ApiService } from '../services/api.service';
 
 @Component({
-  selector: 'app-by-genre',
-  templateUrl: './by-genre.component.html',
-  styleUrls: ['./by-genre.component.scss']
+  selector: 'app-by-platform',
+  templateUrl: './by-platform.component.html',
+  styleUrls: ['./by-platform.component.scss']
 })
-export class ByGenreComponent implements OnInit {
+export class ByPlatformComponent implements OnInit {
 
-  currentGenre: String;
+  currentPlatform: String;
 
   games: IGame[] = [];
-  
+
   constructor(private route: ActivatedRoute, private apiService: ApiService, private location: Location) { 
     this.location.onUrlChange(path => {
       window.location.reload();
-      
     });
   }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      this.currentGenre = params.get('genre');
+      this.currentPlatform = params.get('platform');
     });
 
-    this.getGamesGenres();
+    this.getGamesPlatform();
   }
 
-  getGamesGenres(): void{
-    this.apiService.getGamesGenre(this.currentGenre).subscribe(res => {
+  getGamesPlatform(): void{
+    this.apiService.getGamesPlatform(this.currentPlatform).subscribe(res => {
       for (const data of res.body) {
         this.games.push(data);
       }

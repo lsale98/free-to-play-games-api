@@ -11,9 +11,6 @@
                 <li>
                     <a routerLink="/" (click)="toggleMenu()">Home</a>
                 </li>
-                <li>
-                    <a routerLink="/favorite" (click)="toggleMenu()">Favorite</a>
-                </li>
             </ul>
         </div>
         <div class="genre" [ngClass]="{'active': genreMenuOpen}">
@@ -25,6 +22,14 @@
                 <li *ngFor="let category of categories">
                     <a routerLink="/genre/{{category.name}}" (click)="toggleMenu()">{{category.name | titlecase}}</a>
                 </li>
+            </ul>
+        </div>
+        <div class="platform" [ngClass]="{'active': platformMenuOpen}">
+            <h3 (click)="togglePlatformMenu()"><i class="fas fa-chevron-down"></i>Platform</h3>
+            <ul>
+                <li><a href="#all-games" (click)="toggleMenu()">All Platforms</a></li>
+                <li><a routerLink="/platform/pc">Windows (PC)</a></li>
+                <li><a routerLink="/platform/browser">Web Browser</a></li>
             </ul>
         </div>
     </div>

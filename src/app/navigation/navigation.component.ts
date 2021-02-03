@@ -13,6 +13,7 @@ export class NavigationComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   genreMenuOpen: boolean = false;
+  platformMenuOpen: boolean = false;
   menuOpen: boolean = false;
 
   categories: ICategory[] = [
@@ -55,9 +56,14 @@ export class NavigationComponent implements OnInit {
     this.genreMenuOpen = !this.genreMenuOpen;
   }
 
+  togglePlatformMenu(): void{
+    this.platformMenuOpen = !this.platformMenuOpen
+  }
+
   toggleMenu(): void{
     this.menuOpen = !this.menuOpen;
     this.genreMenuOpen = false;
+    this.platformMenuOpen = false;
   }
 
   scrollTop(): void{

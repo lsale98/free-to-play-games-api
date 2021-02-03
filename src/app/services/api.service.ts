@@ -13,6 +13,8 @@ export class ApiService {
 
   readonly API_BASE_GENRE = "https://www.freetogame.com/api/games?category=";
 
+  readonly API_BASE_PLATFORM = "https://www.freetogame.com/api/games?platform=";
+
   constructor(private http: HttpClient) { }
 
   getGames(): Observable<HttpResponse<IGame[]>> {
@@ -25,5 +27,9 @@ export class ApiService {
 
   getGamesGenre(genre: String): Observable<HttpResponse<IGame[]>>{
     return this.http.get<IGame[]>(this.API_BASE_GENRE + `${genre}`, { observe: 'response' });
+  }
+
+  getGamesPlatform(platfrom: String): Observable<HttpResponse<IGame[]>>{
+    return this.http.get<IGame[]>(this.API_BASE_PLATFORM + `${platfrom}`, { observe: 'response' });
   }
 }

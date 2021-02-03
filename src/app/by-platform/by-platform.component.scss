@@ -1,0 +1,133 @@
+@import '../../variables';
+#platform {
+    width: 100%;
+    min-height: 100vh;
+    background-color: $primary;
+    padding: 56px 0 40px 0;
+    overflow: hidden;
+    .hero {
+        width: 100%;
+        max-height: 600px;
+        overflow: hidden;
+        position: relative;
+        top: 0;
+        left: 0;
+        &__image {
+            width: 100%;
+        }
+        .layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $secondary-60;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .heading {
+                color: white;
+                font-weight: 400;
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            .btn {
+                a {
+                    display: inline-block;
+                    padding: 8px 16px;
+                    margin: 0 10px;
+                    border-radius: 5px;
+                }
+                .browse {
+                    background-color: $blue-color;
+                    color: white;
+                }
+            }
+        }
+    }
+    #games {
+        width: 100%;
+        height: fit-content;
+        padding-top: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        .game {
+            max-width: 320px;
+            height: fit-content;
+            margin: auto;
+            margin-bottom: 30px;
+            background-color: $secondary;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &__image {
+                width: 100%;
+            }
+            &__info {
+                color: $gray-text;
+                background-color: $secondary;
+                padding: 10px 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .info {
+                    h3 {
+                        font-size: 14px;
+                        span {
+                            font-weight: 400;
+                            color: $blue-color;
+                        }
+                    }
+                }
+                .btn {
+                    width: 22px;
+                    height: 22px;
+                    text-align: center;
+                    a {
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        i {
+                            color: $blue-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #platform {
+        .hero {
+            .layer {
+                .heading {
+                    font-size: 28px;
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    #platform {
+        .hero {
+            .layer {
+                .heading {
+                    font-size: 36px;
+                }
+                p {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+}

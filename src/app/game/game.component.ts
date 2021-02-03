@@ -37,7 +37,12 @@ export class GameComponent implements OnInit {
         this.game = res.body;
       })
       .then(() => {
-         this.currentGenre = this.game.genre;
+        if (this.game.genre == "Card Game") {
+           this.currentGenre = "card"
+        }
+        else {
+          this.currentGenre = this.game.genre;
+        }
       })
       .then(() => {
         this.getGamesGenres();

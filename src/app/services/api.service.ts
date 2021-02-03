@@ -25,11 +25,11 @@ export class ApiService {
     return this.http.get<IGame>(this.API_BASE_SINGLE + `${id}`, {observe: 'response'});
   }
 
-  getGamesGenre(genre: String): Observable<HttpResponse<IGame[]>>{
+  getGamesGenre(genre: string): Observable<HttpResponse<IGame[]>>{
     return this.http.get<IGame[]>(this.API_BASE_GENRE + `${genre}`, { observe: 'response' });
   }
 
-  getGamesPlatform(platfrom: String): Observable<HttpResponse<IGame[]>>{
+  getGamesPlatform(platfrom: string): Observable<HttpResponse<IGame[]>>{
     return this.http.get<IGame[]>(this.API_BASE_PLATFORM + `${platfrom}`, { observe: 'response' });
   }
 }

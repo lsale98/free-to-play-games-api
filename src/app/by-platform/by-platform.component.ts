@@ -11,7 +11,7 @@ import { ApiService } from '../services/api.service';
 })
 export class ByPlatformComponent implements OnInit {
 
-  currentPlatform: String;
+  currentPlatform: string;
 
   games: IGame[] = [];
 

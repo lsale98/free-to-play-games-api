@@ -11,7 +11,7 @@ import { ApiService } from '../services/api.service';
 })
 export class ByGenreComponent implements OnInit {
 
-  currentGenre: String;
+  currentGenre: string;
 
   games: IGame[] = [];
   

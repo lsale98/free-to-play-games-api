@@ -12,7 +12,7 @@ import { ApiService } from '../services/api.service';
 export class GameComponent implements OnInit {
 
   currentId: number;
-  currentGenre: String;
+  currentGenre: string;
   game: IGame;
   games: IGame[] = [];
 

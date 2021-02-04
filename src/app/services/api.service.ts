@@ -7,13 +7,15 @@ import { IGame } from '../models/Game';
 })
 export class ApiService {
 
-  readonly API_BASE = "https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/games";
+  readonly API_BASE = "https://free-to-play-games-database.p.rapidapi.com/api/games";
 
-  readonly API_BASE_SINGLE = "https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/game?id=";
+  readonly API_BASE_SINGLE = "https://free-to-play-games-database.p.rapidapi.com/api/game?id=";
 
-  readonly API_BASE_GENRE = "https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/games?category=";
+  readonly API_BASE_GENRE = "https://free-to-play-games-database.p.rapidapi.com/api/games?category=";
 
-  readonly API_BASE_PLATFORM = "https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/games?platform=";
+  readonly API_BASE_PLATFORM = "https://free-to-play-games-database.p.rapidapi.com/api/games?platform=";
+
+  
 
   constructor(private http: HttpClient) { 
      
@@ -21,18 +23,31 @@ export class ApiService {
   }
 
   getGames(): Observable<HttpResponse<IGame[]>> {
-    return this.http.get<IGame[]>(this.API_BASE, { observe: 'response' });
+    const headers = new HttpHeaders()
+   .set('x-rapidapi-key', 'ffaca5a939msh97a2a1e80ace8e0p101f01jsnbd2bb9bf732f')
+   .set('x-rapidapi-host', 'free-to-play-games-database.p.rapidapi.com');
+    return this.http.get<IGame[]>(this.API_BASE, { observe: 'response', headers: headers });
   }
 
   getGame(id: Number): Observable<HttpResponse<IGame>>{
-    return this.http.get<IGame>(this.API_BASE_SINGLE + `${id}`, {observe: 'response'});
+    const headers = new HttpHeaders()
+      .set('x-rapidapi-key', 'ffaca5a939msh97a2a1e80ace8e0p101f01jsnbd2bb9bf732f')
+      .set('x-rapidapi-host', 'free-to-play-games-database.p.rapidapi.com');
+    
+    return this.http.get<IGame>(this.API_BASE_SINGLE + id, {observe: 'response', headers: headers});
   }
 
   getGamesGenre(genre: string): Observable<HttpResponse<IGame[]>>{
-    return this.http.get<IGame[]>(this.API_BASE_GENRE + `${genre}`, { observe: 'response' });
+     const headers = new HttpHeaders()
+   .set('x-rapidapi-key', 'ffaca5a939msh97a2a1e80ace8e0p101f01jsnbd2bb9bf732f')
+   .set('x-rapidapi-host', 'free-to-play-games-database.p.rapidapi.com');
+    return this.http.get<IGame[]>(this.API_BASE_GENRE + `${genre}`, { observe: 'response', headers: headers });
   }
 
   getGamesPlatform(platfrom: string): Observable<HttpResponse<IGame[]>>{
-    return this.http.get<IGame[]>(this.API_BASE_PLATFORM + `${platfrom}`, { observe: 'response' });
+     const headers = new HttpHeaders()
+   .set('x-rapidapi-key', 'ffaca5a939msh97a2a1e80ace8e0p101f01jsnbd2bb9bf732f')
+   .set('x-rapidapi-host', 'free-to-play-games-database.p.rapidapi.com');
+    return this.http.get<IGame[]>(this.API_BASE_PLATFORM + `${platfrom}`, { observe: 'response', headers: headers });
   }
 }

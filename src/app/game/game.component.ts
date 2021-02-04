@@ -11,7 +11,7 @@ import { ApiService } from '../services/api.service';
 })
 export class GameComponent implements OnInit {
 
-  currentId: number;
+  currentId: Number;
   currentGenre: string;
   game: IGame;
   games: IGame[] = [];
@@ -39,6 +39,9 @@ export class GameComponent implements OnInit {
       .then(() => {
         if (this.game.genre == "Card Game") {
            this.currentGenre = "card"
+        }
+        if (this.game.genre == "Battle Royale") {
+          this.currentGenre = "battle-royale";
         }
         else {
           this.currentGenre = this.game.genre;

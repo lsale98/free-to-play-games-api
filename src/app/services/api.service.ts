@@ -8,13 +8,13 @@ import { environment } from '../../environments/environment';
 })
 export class ApiService {
 
-  readonly API_BASE = "https://free-to-play-games-database.p.rapidapi.com/api/games";
+  readonly API_BASE = `${environment.api}/games`;
 
-  readonly API_BASE_SINGLE = "https://free-to-play-games-database.p.rapidapi.com/api/game?id=";
+  readonly API_BASE_SINGLE = `${environment.api}/game?id=`;
 
-  readonly API_BASE_GENRE = "https://free-to-play-games-database.p.rapidapi.com/api/games?category=";
+  readonly API_BASE_GENRE = `${environment.api}/games?category=`;
 
-  readonly API_BASE_PLATFORM = "https://free-to-play-games-database.p.rapidapi.com/api/games?platform=";
+  readonly API_BASE_PLATFORM = `${environment.api}/games?platform=`;
 
   
 

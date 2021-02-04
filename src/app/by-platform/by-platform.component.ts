@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { IGame } from '../models/Game';
 import { ApiService } from '../services/api.service';
+import { LoaderService } from '../services/loader.service';
 
 @Component({
   selector: 'app-by-platform',
@@ -15,7 +16,7 @@ export class ByPlatformComponent implements OnInit {
 
   games: IGame[] = [];
 
-  constructor(private route: ActivatedRoute, private apiService: ApiService, private location: Location) { 
+  constructor(private route: ActivatedRoute, private apiService: ApiService, private location: Location, public loaderService: LoaderService) { 
     this.location.onUrlChange(path => {
       window.location.reload();
     });

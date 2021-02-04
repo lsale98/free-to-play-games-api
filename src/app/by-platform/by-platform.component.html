@@ -1,3 +1,6 @@
+<div *ngIf="loaderService.isLoading | async" class="loader__container">
+    <p>Loading data</p>
+</div>
 <div id="platform">
     <div class="hero">
         <img class="hero__image" src="../../assets/{{currentPlatform}}.jpg" alt="Hero background image">

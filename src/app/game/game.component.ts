@@ -17,7 +17,7 @@ export class GameComponent implements OnInit {
   game: IGame;
   games: IGame[] = [];
 
-  constructor(private route: ActivatedRoute, private apiService: ApiService, private location:Location, private router: Router, public loaderSevice: LoaderService) {
+  constructor(private route: ActivatedRoute, private apiService: ApiService, private location:Location, private router: Router, public loaderService: LoaderService) {
     this.location.onUrlChange(path => {
       window.location.reload();
      });

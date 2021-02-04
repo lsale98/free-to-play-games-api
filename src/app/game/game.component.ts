@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { IGame } from '../models/Game';
 import { ApiService } from '../services/api.service';
+import { LoaderService } from '../services/loader.service';
 
 @Component({
   selector: 'app-game',
@@ -16,7 +17,7 @@ export class GameComponent implements OnInit {
   game: IGame;
   games: IGame[] = [];
 
-  constructor(private route: ActivatedRoute, private apiService: ApiService, private location:Location, private router: Router) {
+  constructor(private route: ActivatedRoute, private apiService: ApiService, private location:Location, private router: Router, public loaderSevice: LoaderService) {
     this.location.onUrlChange(path => {
       window.location.reload();
      });

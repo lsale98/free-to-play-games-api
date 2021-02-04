@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { IGame } from '../models/Game';
+import { LoaderService } from '../services/loader.service';
 
 @Component({
   selector: 'app-homepage',
@@ -13,7 +14,7 @@ export class HomepageComponent implements OnInit {
   randomGames: IGame[] = [];
   gamesId: Array<Number> = [];
 
-  constructor(private apiService: ApiService) {
+  constructor(private apiService: ApiService, public loaderService: LoaderService) {
    
    }
 

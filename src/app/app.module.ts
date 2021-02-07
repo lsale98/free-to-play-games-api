@@ -11,6 +11,7 @@ import { GameComponent } from './game/game.component';
 import { ByGenreComponent } from './by-genre/by-genre.component';
 import { ByPlatformComponent } from './by-platform/by-platform.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     GameComponent,
     ByGenreComponent,
     ByPlatformComponent,
-    FooterComponent
+    FooterComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IGame } from '../models/Game';
 import { environment } from '../../environments/environment';
+import { Environment } from '@angular/compiler-cli/src/ngtsc/typecheck/src/environment';
+
 @Injectable({
   providedIn: 'root'
 })
